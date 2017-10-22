@@ -1,3 +1,21 @@
-# First Chapter
+# Java实现细节
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+翻开Sedgewick的这本Algorithms，作者并没有一上来就去将算法应该怎么实现，而是先讲了一些用Java实现的注意点。先尝试将这些问题总结一下：
+
+### 面向接口编程
+
+在作者介绍算法的时候，第一件事情往往是先写API，然后再给具体的实现。最初按照这个思路学起来比较费劲，但是到了后来才发现，这其实是最正确的做法。抽象数据类型\(abstract data type\)的目的就是给用户\(client\)提供服务，用户完全不需要知道ADT的具体实现，只需要知道它有哪些功能。因此，首先需要确定一个ADT将要提供哪些服务。API也不只是对客户有帮助，它同样可以帮助实现者明确自己的任务。
+
+### 泛型
+
+Java是静态类型语言，并且不同于ML这样的静态语言，它需要**显示声明**参数的类型。因此这就产生了一个**矛盾**：函数需要接受特定的类型，但是该函数又希望适用于所有数据类型。经过一系列的演化，Java最终引入了泛型\(generics\)。泛型的常见写法如下：
+
+```
+private static void stack<Item>{
+
+```
+
+
+
+
+
